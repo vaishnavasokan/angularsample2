@@ -1,1 +1,30 @@
 <p>addproduct works!</p>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <table>
+                <tr>
+                    <td>Product ID :</td>
+                    <td><input type="text" name="pid" [(ngModel)]="pid" ></td>
+                </tr>
+                <tr>
+                        <td>Product Name :</td>
+                    <td><input type="text" name="pname" [(ngModel)]="pname" ></td>
+                </tr>
+                <tr>
+                        <td>Price :</td>
+                    <td><input type="text" name="price" [(ngModel)]="price" ></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="button" value="add product" name="display" (click)="addproduct()"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+

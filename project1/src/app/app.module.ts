@@ -15,6 +15,8 @@ import { ContactusComponent } from './contactus/contactus.component';
 import { DataComponent } from './data/data.component';
 import {CalcService} from './calc.service';
 import {SampleService} from './sample.service'
+import {ProductService} from './product.service'
+import {StorageServiceModule} from 'angular-webstorage-service'
 
 const approutes:Routes=[{path:"new",component:AddproductComponent},
 {path:"edit",component:EditproductComponent},
@@ -41,9 +43,10 @@ const approutes:Routes=[{path:"new",component:AddproductComponent},
     AppRoutingModule,
     RouterModule.forRoot(approutes),
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    StorageServiceModule
   ],
-  providers: [CalcService,SampleService],
+  providers: [CalcService,SampleService,ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

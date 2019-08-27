@@ -1,1 +1,21 @@
 <p>editproduct works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col col-4 col-sm-4">
+                <input type="text" name="name" placeholder="Username" [(ngModel)]="val"/>
+                <input type="button" value="Set Name" (click)="Add()"/>
+                <br>
+                <br>
+                <label>Welcome {{user}}</label>
+        </div>
+        
+        <div class="col col-4 col-sm-4">
+                <input type="text" name="pname" placeholder="Product Name" [(ngModel)]="pname"/>
+                <input type="text" name="price" placeholder="Price" [(ngModel)]="price"/>
+                <input type="button" value="Add to Cart" (click)="Addtocart()"/>
+        </div>
+    </div>
+</div>
+
+
+

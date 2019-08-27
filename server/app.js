@@ -2,15 +2,7 @@ var express = require("express");
 var bodyparser=require("body-parser");
 const app=express();
 
-
-app.use(bodyparser.urlencoded({extended:true}))
-app.use(bodyparser.json());
-
-app.listen(8000,function(req,res)
-{
-    console.log("Server started listening.");
-})
-
+var productrouter=require("./Routes/productrouter");
 
 app.use(function (req, res, next) {
 
@@ -20,6 +12,19 @@ app.use(function (req, res, next) {
     res.setHeader('Access-Control-Allow-Credentials', true);
     next();
 });
+
+app.use(bodyparser.urlencoded({extended:true}))
+app.use(bodyparser.json());
+
+app.use("/product",productrouter);
+
+app.listen(8000,function(req,res)
+{
+    console.log("Server started listening.");
+})
+
+
+
 
 app.get("/data",function(req,res)
 {
