@@ -17,5 +17,33 @@
     </div>
 </div>
 
+<div class="container">
+    <div class="row">
+        <div class="col col-4 col-sm-4">
+            <table>
+                <tr>
+                    <td>Product ID</td>
+                    <td><input type="text" name="pid" value="{{viewresult[0].pid}}" readonly/></td>
+                </tr>
+                <tr>
+                    <td>Name</td>
+                    <td><input type="text" name="pname" value="{{viewresult[0].pname}}" [(ngModel)]="name"/></td>
+                </tr>
+                <tr>
+                    <td>Price</td>  
+                    <td><input type="text" name="price" value="{{viewresult[0].price}}" [(ngModel)]="prodprice"/></td>  
+                </tr>  
+                <tr>
+                        <td></td>  
+                        <td><input type="button" value="Update" (click)="update(viewresult[0].pid)"/></td>  
+                </tr>               
+
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
 
 

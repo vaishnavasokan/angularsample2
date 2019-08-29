@@ -16,32 +16,12 @@
                         <td>{{i.pid}}</td>
                         <td>{{i.pname}}</td>
                         <td>{{i.price}}</td>
-                        <td><input type="button" value="Edit" (click)="editproduct()"/></td>
+                        <td><input type="button" value="Edit" (click)="editproduct(i.pid)"/></td>
                     </tr>
                 </table>
             </div>
             <div class="col col-4 col-sm-4">
 
-                <div class="col col-4 col-sm-4">
-                    <table>
-                        <tr>
-                            <td>Product ID</td>
-                            <td><input type="text" name="pid"/></td>
-                        </tr>
-                        <tr>
-                            <td>Name</td>
-                            <td><input type="text" name="pname"/></td>
-                        </tr>
-                        <tr>
-                            <td>Price</td>  
-                            <td><input type="text" name="price"/></td>  
-                        </tr>  
-                        <tr>
-                                <td></td>  
-                                <td><input type="button" value="Update"/></td>  
-                        </tr>               
-        
-                    </table>
-                </div>
+                
             </div>
         </div>

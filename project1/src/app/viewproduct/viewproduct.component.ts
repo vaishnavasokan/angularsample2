@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ProductService} from '../product.service'
+import {Router} from '@angular/router'
 
 @Component({
   selector: 'app-viewproduct',
@@ -10,7 +11,7 @@ export class ViewproductComponent implements OnInit {
 
   productdetails;
   b1:boolean=false;
-  constructor(private ps:ProductService) { }
+  constructor(private ps:ProductService, private rt:Router) { }
 
   ngOnInit() {
   }
@@ -24,7 +25,8 @@ export class ViewproductComponent implements OnInit {
   
   public editproduct(id)
   {
-    //this.b1 =true;
+
+      this.rt.navigateByUrl("/home/edit/"+id)
   }
 
 }

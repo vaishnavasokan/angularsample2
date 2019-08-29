@@ -19,4 +19,18 @@ export class ProductService {
     let url="http://localhost:8000/product/add";
     return this.hc.post(url,{pid:a,pname:b,price:c});
   }
+
+  public viewdata(id)
+  {
+    let url="http://localhost:8000/product/view/"+id;
+    return this.hc.get(url);
+  }
+
+  public updatedata(x,y,z)
+  {
+    let url="http://localhost:8000/product/update";
+    return this.hc.post(url,{pid:x,pname:y,price:z});
+  }
+
+  
 }

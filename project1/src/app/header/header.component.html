@@ -2,13 +2,13 @@
     <div class="nav-wrapper">
       <a href="#" class="brand-logo right">Logo</a>
       <ul id="nav-mobile" class="left hide-on-med-and-down">
-        <li><a routerLink="/edit">Edit Product</a></li>
-        <li><a routerLink="/new">Add Product</a></li>
-        <li><a routerLink="/view">View Product</a></li>
-        <li><a routerLink="/del">Remove Product</a></li>
-        <li><a routerLink="/about">About us</a></li>
-        <li><a routerLink="/contact">Contact us</a></li>
-        <li><a routerLink="/service">Services</a></li>
+        <li><a routerLink="/home/edit">Edit Product</a></li>
+        <li><a routerLink="/home/new">Add Product</a></li>
+        <li><a routerLink="/home/view">View Product</a></li>
+        <li><a routerLink="/home/del">Remove Product</a></li>
+        <li><a [routerLink]="['/home/about/','ABC Corp','Kochi']">About us</a></li>
+        <li><a routerLink="/home/contact">Contact us</a></li>
+        <li><a routerLink="/home/service">Services</a></li>
       </ul>
     </div>
   </nav>

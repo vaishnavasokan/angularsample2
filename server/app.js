@@ -30,3 +30,4 @@ app.get("/data",function(req,res)
 {
     res.send({msg:"data from server"});
 })
+

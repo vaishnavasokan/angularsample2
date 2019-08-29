@@ -52,8 +52,26 @@ router.get("/view",function(req,res){
     
 })
 
+router.get("/view/:id",function(req,res){
+
+    var id =req.params.id;
+    product.find({pid:id},function(err,result){
+        if (err) throw err;
+        else{
+            //console.log(result);
+            res.send(result);
+        }
+    })
+    
+})
+
 router.post("/update",function(req,res){
-    product.updateMany({},{$set:{pname:"xyz"}},function(err,result){
+
+    var id=req.body.pid;
+    console.log(id);
+    var name=req.body.pname;
+    var price=req.body.price;
+    product.updateMany({pid:id},{$set:{pname:name,price:price}},function(err,result){
         if (err) throw err;
         else{
             console.log(result);

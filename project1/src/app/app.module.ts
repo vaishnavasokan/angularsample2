@@ -13,18 +13,24 @@ import { ViewproductComponent } from './viewproduct/viewproduct.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { DataComponent } from './data/data.component';
-import {CalcService} from './calc.service';
 import {SampleService} from './sample.service'
 import {ProductService} from './product.service'
-import {StorageServiceModule} from 'angular-webstorage-service'
+import {CalcService} from './calc.service'
+import {StorageServiceModule} from 'angular-webstorage-service';
+import { LoginComponent } from './login/login.component';
+import { HomeComponent } from './home/home.component'
 
-const approutes:Routes=[{path:"new",component:AddproductComponent},
-{path:"edit",component:EditproductComponent},
+const approutes:Routes=[
+  {path:"", component:LoginComponent},
+  {path:"home",component:HomeComponent,
+  children:[{path:"new",component:AddproductComponent},
+{path:"edit/:id",component:EditproductComponent},
 {path:"del",component:DeleteproductComponent},
 {path:"view",component:ViewproductComponent},
-{path:"about",component:AboutusComponent},
+{path:"about/:cname/:loc",component:AboutusComponent},
 {path:"contact",component:ContactusComponent},
-{path:"service",component:DataComponent}];
+{path:"service",component:DataComponent}]
+  }];
 
 @NgModule({
   declarations: [
@@ -36,7 +42,9 @@ const approutes:Routes=[{path:"new",component:AddproductComponent},
     ViewproductComponent,
     AboutusComponent,
     ContactusComponent,
-    DataComponent
+    DataComponent,
+    LoginComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
